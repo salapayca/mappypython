@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: intro
+parts:
+- caption : Introduction to Python
+  chapters:
+  - file: 1_All_About_Strings
+  - file: 2_Python_Numbers
+  - file: 3_Boolean_Logic
+  - file: 4_Order-of_Operations
+  - file: 5_List_Universe
+  - file: 6_List_of_lists
+  - file: 7_Functions_and_Methods
+  - file: 8_Decision_Making
+  - file: 9_Looping_Around
+  - file: 10_Practice_Loops
+- caption : Jupyter Book Basics
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
+  - file: markdownfile
