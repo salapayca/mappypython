@@ -5,33 +5,19 @@
 # 
 # 
 
-# 1. Practice while loop with else from [Programiz.com](https://www.programiz.com/python-programming/while-loop). You can use the empty code cell below to test your codes.
-
-# In[1]:
-
-
-#while loop with else
-
-counter = 0
-
-while counter<3 :
-    print ("Inside loop")
-    counter = counter +1
-    print(counter)
-else:
-    print ("Inside else")
-
-
 # <center><img src="https://i.etsystatic.com/6854467/r/il/87fa53/1383013322/il_570xN.1383013322_31ab.jpg" width=300 height=300 align="center"/></center>
 
 # 2. Imagine you are in a _Python_ restaurant which serves menu as a list. And, you are a hungry caterpillar who wants to eat everything! And frankly, you can order your food by print statements. Write a for loop to print the names of the foods that you want to eat. 
 
-# In[2]:
+# In[1]:
 
 
 menu_pycafe = ["one ice-cream cone", "one pickle", "one slice of Swiss cheese", "one slice of salami",
                "one lollipop", "one piece of cherry pie", "one sausage", "one cupcake and one slice of watermelon"]
-#your code goes here
+
+
+# In[2]:
+
 
 for i in menu_pycafe:
     print ("I would like " +i)

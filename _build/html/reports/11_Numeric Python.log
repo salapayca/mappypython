@@ -23,7 +23,7 @@ arr_e = np.array([1,2]
 print(arr_e)
 ------------------
 
-[1;36m  File [1;32m"C:\Users\ssalapayca\AppData\Local\Temp\ipykernel_15364\3589100445.py"[1;36m, line [1;32m4[0m
+[1;36m  File [1;32m"C:\Users\ssalapayca\AppData\Local\Temp\ipykernel_26092\3589100445.py"[1;36m, line [1;32m4[0m
 [1;33m    print(arr_e)[0m
 [1;37m        ^[0m
 [1;31mSyntaxError[0m[1;31m:[0m invalid syntax
