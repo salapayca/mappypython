@@ -346,12 +346,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition">
+   Addition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiplication">
+   Multiplication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subtraction">
+   Subtraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#division">
+   Division
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -363,6 +402,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition">
+   Addition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiplication">
+   Multiplication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subtraction">
+   Subtraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#division">
+   Division
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -372,7 +439,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="algebra-of-strings">
 <h1>Algebra of Strings<a class="headerlink" href="#algebra-of-strings" title="Permalink to this headline">#</a></h1>
-<p>While using python scripting in our spatial analysis, we will be using a lot of unicode characters. Strings can be any characters (letters, numbers, symbols, and what not) but python will know that they are string when we use <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> quotaton marks. In the below example, we will see how we can combine several strings and print the output.
+<p>Algebra? Strings? It sounds oxymoron, right? Afterall, strings are nothing but characters so how come we do addition, multiplication, substraction or division on them?
+While using python scripting in our spatial analysis, we will be using a lot of unicode characters. Strings can be any characters (letters, numbers, symbols, and what not) but python will know that they are string when we use <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> quotaton marks.</p>
+<section id="addition">
+<h2>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">#</a></h2>
+<p>In the below example, we will see how we can combine several strings and print the output.
 You can joining two strings using <code class="docutils literal notranslate"><span class="pre">addition(+)</span></code> operation</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -440,6 +511,9 @@ And yes, I like Celcius better than Fahrenheit!
 </div>
 </div>
 </div>
+</section>
+<section id="multiplication">
+<h2>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">#</a></h2>
 <p>Addition is not the algebric operation that works on strings. You can also use <code class="docutils literal notranslate"><span class="pre">multiplication</span></code>! The below code enables you to print a string multiple times:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -460,6 +534,97 @@ Python
 </div>
 </div>
 </div>
+</section>
+<section id="subtraction">
+<span id="stringlist"></span><h2>Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">#</a></h2>
+<p>Strings are the stored as list, and therefore have an index positioning system starting from 0 because Python is a zero-based language. Each character is assigned to an index number.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s2">&quot;GIS Programming&quot;</span>
+<span class="n">mystring</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;G&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can obtain any character by changing the index value - you are welcome to try by yourself.You can use negative index numbers to start counting from the end. The last item in the list will be returned with an index number -1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>How about obtaining a slice from our string? You can specify the starting and ending index numbers and you will get the slice that you are interested in :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#notice that the second index valued character is not included - it tells python to where to stop!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GIS&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>OK, what if you are intested in something from the beginning to a point that you are intested in, or the from a starting point until the end. Let’s see how we can achieve that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mypath</span> <span class="o">=</span> <span class="s2">&quot;https://twitter.com/GisProgramming&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mypath</span><span class="p">[</span><span class="mi">8</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mypath</span><span class="p">[:</span><span class="o">-</span><span class="mi">14</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>twitter.com/GisProgramming
+https://twitter.com/
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have a long string or even a file and you don’t want to sit and count every single character, you can simply use <code class="docutils literal notranslate"><span class="pre">find()</span></code> which will return the index number that you are looking for:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mypath</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Gis&quot;</span><span class="p">)</span> <span class="c1"># if you are not paying attention to the upper or lower case,</span>
+                   <span class="c1"># or there is no value equals to what you are searching for then it will return -1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">join()</span></code> will help you to join elements of a list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mypath</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot;twitter.com&quot;</span><span class="p">,</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="s2">&quot;GisProgramming&quot;</span><span class="p">]</span>
+<span class="n">myfullpath</span> <span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">myfullpath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mypath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://twitter.com/GisProgramming&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="division">
+<h2>Division<a class="headerlink" href="#division" title="Permalink to this headline">#</a></h2>
 <p>We don’t have divide for strings, but we can split them! Let’s use <code class="docutils literal notranslate"><span class="pre">split</span></code> function in action:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -475,6 +640,7 @@ Python
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
