@@ -15,6 +15,7 @@ parts:
   - file: 8_Decision_Making
   - file: 9_Looping_Around
   - file: 10_Practice_Loops
+  - file: Module_1
 - caption : Jupyter Book Basics
   chapters:
   - file: markdown
