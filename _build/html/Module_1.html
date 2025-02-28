@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Mappy Python Diaries! &#8212; Mappy Python Diaries</title>
+    <title>Welcome to Module 1: Spatial Thinking in Decision Making &#8212; Mappy Python Diaries</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Algebra of Strings" href="1_All_About_Strings.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="HANDS-ON TIME" href="10_Practice_Loops.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,8 +107,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Mappy Python Diaries!
                 </a>
             </li>
@@ -117,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Introduction to Python
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_All_About_Strings.html">
    Algebra of Strings
@@ -163,8 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
    HANDS-ON TIME
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Module_1.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Welcome to Module 1: Spatial Thinking in Decision Making
   </a>
  </li>
@@ -285,7 +286,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://salapayca.github.io/mappypython//issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://salapayca.github.io/mappypython//issues/new?title=Issue%20on%20page%20%2FModule_1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -313,7 +314,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.md"
+        <a href="_sources/Module_1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -324,7 +325,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -350,23 +351,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Welcome to Module 1: Spatial Thinking in Decision Making
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-special-about-spatial-thinking-in-decision-making">
+   What is Special about Spatial Thinking in Decision Making?
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to Mappy Python Diaries!</h1>
+                <h1>Welcome to Module 1: Spatial Thinking in Decision Making</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Welcome to Module 1: Spatial Thinking in Decision Making
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-special-about-spatial-thinking-in-decision-making">
+   What is Special about Spatial Thinking in Decision Making?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -374,36 +422,50 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-mappy-python-diaries">
-<h1>Welcome to Mappy Python Diaries!<a class="headerlink" href="#welcome-to-mappy-python-diaries" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book that I started when my Jupyter notebooks become a giant pile and I thought I would like to have a living archive for them.
-I have been teaching Python to GIS Students since 2018 but Jupyter notebooks entered my life with the pandemic.  I was teaching GIS Programming during Fall 2020 - the semester known as the first officially fully remote semester ever. Teaching programming remotely? I had been teaching online (via Zoom) before the pandemic, but my students had access to a computer lab, they were using the campus full-time. This remote (Fall 2020) is not even close to that remote. So, the question and terror of anxiety hit simultaneously. I spend the Summer of 2020 trying to come up with ideas to find opportunities for students to overcome the challenge of accessibility in places where software and hardware scarcity exists.
-Well, you already have the spoiler from the title that I revamped my course in a way that the material can be molded into a format that enables reusing and recycling, which is quite possible through Jupyter notebooks. And here they come…</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Python</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_All_About_Strings.html">Algebra of Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_Python_Numbers.html">Numbers in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_Boolean_Logic.html">Boolean Operators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_List_Universe.html">Working with Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6_List_of_lists.html">Multi-dimensional Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7_Functions_and_Methods.html">Functions and Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8_Decision_Making.html">Block and Indendation in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_Looping_Around.html">Looping Syntax</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_Practice_Loops.html">HANDS-ON TIME</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module_1.html">Welcome to Module 1: Spatial Thinking in Decision Making</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Module_1.html#what-is-special-about-spatial-thinking-in-decision-making">What is Special about Spatial Thinking in Decision Making?</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-module-1-spatial-thinking-in-decision-making">
+<h1>Welcome to Module 1: Spatial Thinking in Decision Making<a class="headerlink" href="#welcome-to-module-1-spatial-thinking-in-decision-making" title="Permalink to this headline">#</a></h1>
+<!-- <div align="center">
+    <video width="500" height="500"
+       src="tryvideo1.mp4"  
+       controls>
+    </video>
+</div> -->
+<video controls style="max-width: 80%; height: auto; display: block; margin: auto;">
+    <!-- <source src="_build/html/_static/tryvideo1.mp4" type="video/mp4"> -->
+    <source src="/Users/juliensong/Desktop/mappypythonmodules/module1/_build/html/_static/video1.mp4" type="video/mp4">
+    <!-- <source src="_build/html/_static/tryvideo1.mp4" type="video/mp4"> -->
+</video>
+<!-- <div style="display: flex; justify-content: center;">
+<div align="center">
+<div style="position: relative; padding-bottom: 56.25%;">
+        <video
+       src="testvideo.mp4"  
+       controls>
+    </video>
+</div> -->
+<!-- <div style="display: flex; justify-content: center;">
+    <div style="position: relative; width: 70%; height: 0; padding-bottom: 56.25%;">
+        <iframe
+            src="testvideo.mp4"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jupyter Book Basics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Starting with Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdownfile.html">Here’s my sample title</a></li>
-</ul>
-</div>
+</div> -->
+<p>Some text here?</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-special-about-spatial-thinking-in-decision-making">
+<h1>What is Special about Spatial Thinking in Decision Making?<a class="headerlink" href="#what-is-special-about-spatial-thinking-in-decision-making" title="Permalink to this headline">#</a></h1>
+<!-- <img src="image1.png" align="right" width="300px"/> -->
+<!-- <img src="../_static/my_image.png" style="float: right; width: 50%; height: auto; margin-left: 10px;"> -->
+<img src="/Users/juliensong/Desktop/mappypythonmodules/module1/_build/html/_static/image1.png" style="float: right; width: 40%; height: auto; margin-left: 10px;">
+<!-- <img src="_build/html/_static/image1.png" style="float: right; width: 40%; height: auto; margin-left: 10px;"> -->
+<p>We make decisions all the time—and guess what? Most of them are tied to where something happens. Some choices are simple and short-lived, like deciding, “Where should I grab lunch today?” Sure, it seems trivial—unless you bump into your all-time favorite actor during your meal. In that case, your decision about lunch could become a story you tell for the rest of your life!</p>
+<p>Other decisions, like figuring out “What’s the most energy-efficient route from home to campus?” have broader implications. They might reduce your carbon footprint, save you money, or even inspire others to make more environmentally conscious choices.
+<br clear="right"/>
+Since we’re already making location-based decisions daily, why not learn how to make them more efficient, informed… and dare we say, fun? Let’s dive into the world of spatial thinking and reasoning to level up your decision-making skills.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -433,10 +495,17 @@ Well, you already have the spoiler from the title that I revamped my course in a
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="1_All_About_Strings.html" title="next page">
+    <a class='left-prev' id="prev-link" href="10_Practice_Loops.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">HANDS-ON TIME</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Algebra of Strings</p>
+        <p class="prev-next-title">Markdown Files</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
