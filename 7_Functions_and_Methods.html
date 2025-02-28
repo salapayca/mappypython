@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Functions and Methods &#8212; Mappy Python Diaries</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Block and Indendation in Python" href="8_Decision_Making.html" />
+    <link rel="prev" title="Multi-dimensional Lists" href="6_List_of_lists.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mappy Python Diaries</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Mappy Python Diaries!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_All_About_Strings.html">
+   Algebra of Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Python_Numbers.html">
+   Numbers in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Boolean_Logic.html">
+   Boolean Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_List_Universe.html">
+   Working with Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_List_of_lists.html">
+   Multi-dimensional Lists
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_Decision_Making.html">
+   Block and Indendation in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Looping_Around.html">
+   Looping Syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_Practice_Loops.html">
+   HANDS-ON TIME
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Jupyter Book Basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Starting with Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdownfile.html">
+   Here’s my sample title
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://salapayca.github.io/mappypython/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://salapayca.github.io/mappypython//issues/new?title=Issue%20on%20page%20%2F7_Functions_and_Methods.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/7_Functions_and_Methods.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-strings">
+   Working with Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-power-of-replace">
+   The Power of Replace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#da-print">
+   DA PRINT
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Functions and Methods</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-strings">
+   Working with Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-power-of-replace">
+   The Power of Replace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#da-print">
+   DA PRINT
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="functions-and-methods">
+<h1>Functions and Methods<a class="headerlink" href="#functions-and-methods" title="Permalink to this headline">#</a></h1>
+<section id="working-with-strings">
+<h2>Working with Strings<a class="headerlink" href="#working-with-strings" title="Permalink to this headline">#</a></h2>
+<p>Many geoprocessing parameters are strings such as the names of workspace, the name of a feature class or the name of a field in a table.
+Let’s review some useful functions and methods which will help us to work with strings.</p>
+<p>The lower() method returns a lowercase version of the string value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mytext</span><span class="o">=</span> <span class="s2">&quot;I AM LeaRNING GIS PRogRAmming&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mytext</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i am learning gis programming
+</pre></div>
+</div>
+</div>
+</div>
+<p>The upper() method returns a uppercase version of the string value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mytext</span> <span class="o">=</span> <span class="s2">&quot; I am learning GIS Programming&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mytext</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> I AM LEARNING GIS PROGRAMMING
+</pre></div>
+</div>
+</div>
+</div>
+<p>The title() method returns a title-case version of the string value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mytext</span> <span class="o">=</span> <span class="s2">&quot; I am learning GIS Programming&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mytext</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> I Am Learning Gis Programming
+</pre></div>
+</div>
+</div>
+</div>
+<p>The find()method identifies a substring and returns the lefmost index number when the string is found. A value of -1 is returned when the string is not found. Method is case sensitive. What would you expect as a result of below script?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s2">&quot;Geographic Information Systems&quot;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Info&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<p>The join() method is used to join elements of a list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_gis</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Geographic&quot;</span><span class="p">,</span><span class="s2">&quot;Information&quot;</span><span class="p">,</span><span class="s2">&quot;Systems&quot;</span><span class="p">]</span>
+<span class="n">string_gis</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
+<span class="n">string_gis</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list_gis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Geographic Information Systems&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, the elements in the list are joined into a single string. The string object (string_gis) has a method called join(). The value of the string object, in this case, is a space (” “), and the argument of the join() method is the list of elements to be joined into a single string.</p>
+<p>The opposite of the join() is split(). Let’s try to split our sentence:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s2">&quot;I enjoy GIS Programming&quot;</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="n">mystring</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1">#notice we used space hear but it could be anything. You can split from anywhere you like</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;I&#39;, &#39;enjoy&#39;, &#39;GIS&#39;, &#39;Programming&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Strip is usually used to manipulate path and file names. It allows you to remove any combination of characters in any order from the ends of an existing string. lstrip() and rstrip() gives a bit more control by limiting the direction. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mypath</span> <span class="o">=</span> <span class="s2">&quot;Commenting scripts is good&quot;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">mypath</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;Cdo&quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">mypath</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;Cdo&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Commenting scripts is g
+mmenting scripts is good
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calling one of the strip methods without any arguments removes leading or trailing spaces, also referred to as whitespace in coding. This method is useful for cleaning up strings that may have been formatted in another program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myfile</span> <span class="o">=</span> <span class="s2">&quot;   I am reading my ASCII file here&quot;</span>
+<span class="n">myfile</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I am reading my ASCII file here&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-power-of-replace">
+<h2>The Power of Replace<a class="headerlink" href="#the-power-of-replace" title="Permalink to this headline">#</a></h2>
+<p>As the name implies, replace() method used to replace a substring with another substring. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mytopic</span> <span class="o">=</span> <span class="s2">&quot;GIS Scripting&quot;</span>
+<span class="n">mytopic</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Scripting&quot;</span><span class="p">,</span><span class="s2">&quot;Programming&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GIS Programming&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="da-print">
+<h2>DA PRINT<a class="headerlink" href="#da-print" title="Permalink to this headline">#</a></h2>
+<p>You are going to use print function a lot! Either for checking your script is funcioning or not, or to let the end user about the final result. Now, let’s see some examples of how we can use print function.  You can use <strong>+</strong> sign before and/or after your variable depending on where it will be printed. If it is not a string, you have to use <strong>str()</strong> to convert it to string first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Casting</span>
+<span class="n">year</span> <span class="o">=</span><span class="mi">2020</span>
+<span class="nb">print</span> <span class="p">(</span> <span class="s2">&quot; It was hard to predict the spatial spread of the CoViD-19 pandemic in year &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> It was hard to predict the spatial spread of the CoViD-19 pandemic in year 2020
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another way to concatenate your string is to use {} - curly brackets. They will look your print statement more elegant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span><span class="mi">2020</span>
+<span class="nb">print</span> <span class="p">(</span> <span class="s2">&quot;It was hard to predict the spatial spread of the CoViD-19 pandemic in year </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It was hard to predict the spatial spread of the CoViD-19 pandemic in year 2020
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, {0} is replacement field. Can you guess why we have 0 in bracket? What if we have more than one variable to replace?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">studentname</span> <span class="o">=</span> <span class="s2">&quot;Seda&quot;</span>
+<span class="n">studentnumber</span> <span class="o">=</span> <span class="mi">12345</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">&#39;s student number is </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">studentname</span><span class="p">,</span><span class="n">studentnumber</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seda&#39;s student number is 12345
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another approach is using % operator as a placeholder. For strings % is followed by s, other options are %i for integer, %d for decimal numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">studentname</span> <span class="o">=</span> <span class="s2">&quot;Seda&quot;</span>
+<span class="n">studentnumber</span> <span class="o">=</span> <span class="mi">12345</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&#39;s student number is </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">studentname</span><span class="p">,</span><span class="n">studentnumber</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seda&#39;s student number is 12345
+</pre></div>
+</div>
+</div>
+</div>
+<p>And last, but not least, we have string literals where the expressions are replaced with their values at runtime. Let’s see the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">studentname</span> <span class="o">=</span> <span class="s2">&quot;Seda&quot;</span>
+<span class="n">studentnumber</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">studentname</span><span class="si">}</span><span class="s2">&#39;s student number is </span><span class="si">{</span><span class="n">studentnumber</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># HAVE YOU NOTICED THE f </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seda&#39;s student number is 12345
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="6_List_of_lists.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Multi-dimensional Lists</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="8_Decision_Making.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Block and Indendation in Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Seda Salap-Ayca<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
